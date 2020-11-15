@@ -30,7 +30,7 @@ function runCommand(cmd, args, options) {
   })
 }
 
-const installDependencies = () => {
+const installDependencies = (cwd, color) => {
   console.log(`\n\n# ${color("Installing project dependencies ...")}`);
   console.log("# ========================\n");
   return runCommand("npm", ["install"], {
@@ -66,7 +66,7 @@ module.exports = {
     const green = chalk.green;
     const cwd = path.join(process.cwd(), data.inPlace ? "" : data.destDirName);
 
-    installDependencies(cwd, data.autoInstall, green)
+    installDependencies(cwd, green)
       .then(() => {
         console.log("green('Project initialization finished!')}");
       })
