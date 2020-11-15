@@ -59,9 +59,6 @@ module.exports = {
       required: true
     },
   },
-  filters: {
-    "src/**/*": "*"
-  },
   complete: function(data, { chalk }){
     const green = chalk.green;
     const cwd = path.join(process.cwd(), data.inPlace ? "" : data.destDirName);

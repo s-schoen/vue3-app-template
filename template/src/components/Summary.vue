@@ -1,9 +1,9 @@
 <template>
   <div class="p-col-12">
     <div class="card summary">
-      <span class="title">{{ title }}</span>
-      <span class="detail">{{ detail }}</span>
-      <span class="value" :style="style">{{ value }}</span>
+      <span class="title" v-text="title"></span>
+      <span class="detail" v-text="detail"></span>
+      <span class="value" :style="style" v-text="value"></span>
     </div>
   </div>
 </template>

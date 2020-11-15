@@ -7,11 +7,11 @@
       />
       <div v-if="!signin" class="account-text">
         <button class="p-link account-link" @click="onClick">
-          <span class="name">{{ name }}</span>
+          <span class="name" v-text="name"></span>
           <i v-if="showOptions && options" class="pi pi-fw pi-angle-down" />
         </button>
         <br />
-        <span class="subtext" v-if="subtext">{{ subtext }}</span>
+        <span class="subtext" v-if="subtext" v-text="subtext"></span>
       </div>
       <Button
         class="sign-in-button"
@@ -27,7 +27,7 @@
         <li v-for="(option, index) in options" :key="index">
           <button class="p-link" @click="onOptionClick(option)">
             <i :class="option.icon" />
-            <span>{{ option.label }}</span>
+            <span v-text="option.label"></span>
           </button>
         </li>
       </ul>

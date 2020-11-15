@@ -2,7 +2,7 @@
   <div>
     <router-link to="/">
       <img :src="logo" alt="Logo" />
-      <span v-if="name">{{ name }}</span>
+      <span v-if="name" v-text="name"></span>
     </router-link>
   </div>
 </template>

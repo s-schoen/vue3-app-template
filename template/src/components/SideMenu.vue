@@ -23,8 +23,8 @@
             role="menuitem"
           >
             <i :class="item.icon" />
-            <span>{{ item.label }}</span>
-            <span v-if="item.badge" class="p-tag">{{ item.badge }}</span>
+            <span v-text="item.label"></span>
+            <span v-if="item.badge" class="p-tag" v-text="item.badge"></span>
           </router-link>
 
           <!-- External Navigation -->
@@ -38,15 +38,15 @@
             role="menuitem"
           >
             <i :class="item.icon" />
-            <span>{{ item.label }}</span>
-            <span v-if="item.badge" class="badge">{{ item.badge }}</span>
+            <span v-text="item.label"></span>
+            <span v-if="item.badge" class="badge" v-text="item.badge"></span>
           </a>
 
           <!-- Header -->
           <span v-if="!item.to && !item.url" class="header-menuitem">
             <i :class="item.icon" />
-            <span>{{ item.label }}</span>
-            <span v-if="item.badge" class="badge">{{ item.badge }}</span>
+            <span v-text="item.label"></span>
+            <span v-if="item.badge" class="badge" v-text="item.badge"></span>
           </span>
         </li>
       </template>
