@@ -3,17 +3,17 @@
  */
 module.exports = {
   prompts: {
-    name: {
-      type: 'string', // Question type
-      required: true, // Is question Required
-      message: 'Project name' // Question it's self
+    templatename: {
+      type: 'string',
+      required: true,
+      message: 'Project name'
     },
-    description: {
+    templatename: {
       type: 'string',
       required: false,
       message: 'Description',
     },
-    author: {
+    templatename: {
       type: 'string',
       message: 'Author',
       required: true
