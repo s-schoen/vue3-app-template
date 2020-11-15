@@ -60,7 +60,7 @@ module.exports = {
     },
   },
   filters: {
-    "src/**/*": "name || description || author"
+    "src/**/*": "*"
   },
   complete: function(data, { chalk }){
     const green = chalk.green;
@@ -68,7 +68,7 @@ module.exports = {
 
     installDependencies(cwd, green)
       .then(() => {
-        console.log("green('Project initialization finished!')}");
+        console.log(green('Project initialization finished!'));
       })
       .catch((e) => {
         console.log(chalk.red("Error:"), e);
