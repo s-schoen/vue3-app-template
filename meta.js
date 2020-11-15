@@ -1,3 +1,4 @@
+const path = require("path");
 const spawn = require("child_process").spawn;
 
 /**
@@ -42,21 +43,24 @@ const installDependencies = () => {
  */
 module.exports = {
   prompts: {
-    templatename: {
+    name: {
       type: 'string',
       required: true,
       message: 'Project name'
     },
-    templatedescription: {
+    description: {
       type: 'string',
       required: false,
       message: 'Description',
     },
-    templateauthor: {
+    author: {
       type: 'string',
       message: 'Author',
       required: true
     },
+  },
+  filters: {
+    "src/**/*": "name || description || author"
   },
   complete: function(data, { chalk }){
     const green = chalk.green;

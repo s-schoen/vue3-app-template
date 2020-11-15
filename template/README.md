@@ -1,4 +1,5 @@
-# {{templatename}}
+# {{name}}
+{{description}}
 
 ## Project setup
 ```
