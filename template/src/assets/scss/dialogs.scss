@@ -1,0 +1,28 @@
+@import "./vars.scss";
+
+// mobile devices
+@media (max-width: 1024px) {
+  .dialog-input {
+    width: 70vw;
+  }
+}
+
+// desktop devices
+@media (min-width: 1025px) {
+  .dialog-input {
+    width: 50vw;
+  }
+}
+
+
+
+.dialog-button {
+  color: $textColorLight;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  &:hover {
+    background-color: transparent;
+    color: $textColor;
+  }
+}
