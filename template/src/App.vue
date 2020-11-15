@@ -13,7 +13,7 @@
     </Header>
 
     <!-- Sidebar / Navigation drawer including branding, account and navigation menu  -->
-    <Sidebar :visible="sidebarVisible" class="sb">
+    <Sidebar :visible="sidebarVisible" class="sidebar.sidebar">
       <Branding :logo="require('@/assets/logo.png')" name="Branding" />
       <hr />
       <Account
@@ -130,6 +130,10 @@ export default {
     background-color: $overlayColor;
     @include opacity(0.7);
   }
+
+  .sidebar {
+    top: 50px;
+  }
 }
 
 // Desktop devices
@@ -141,10 +145,6 @@ export default {
   .overlay {
     display: none;
   }
-}
-
-.sb {
-  top: 50px;
 }
 
 .sidebar-transition {

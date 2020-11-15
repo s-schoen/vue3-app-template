@@ -14,3 +14,7 @@ To create a new project from this template run the following command
 ```shell
 vue init s-schoen/vue3-app-template my-project-directory
 ```
+
+### Development
+
+Using the Vue mustache syntax (`{{ }} `) in templates of components does not work as these get replaced by `vue init`. Use `v-text` instead.
