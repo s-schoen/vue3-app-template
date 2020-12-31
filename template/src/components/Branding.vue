@@ -11,11 +11,11 @@
 export default {
   props: {
     logo: String,
-    name: String
+    name: String,
   },
   setup() {
     return {};
-  }
+  },
 };
 </script>
 

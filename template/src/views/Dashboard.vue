@@ -5,11 +5,11 @@
       title="Summary"
       detail="Summary Details"
       value="42"
-      style="background-color: green;"
+      style="background-color: green"
     />
     <Button label="Show Toast" class="p-lg-12" @click="showToast" />
     <Button
-      style="margin-top: 1em;"
+      style="margin-top: 1em"
       label="Show SignIn Dialog"
       class="p-lg-12"
       @click="showSignInDialog"
@@ -40,7 +40,7 @@ export default {
         severity: "info",
         summary: "The Title",
         detail: "Details",
-        life: 3000
+        life: 3000,
       });
     };
 
@@ -48,13 +48,13 @@ export default {
       signInDialogVisible.value = true;
     };
 
-    const onSignIn = input => {
+    const onSignIn = (input) => {
       console.log("Input", input);
       signInDialogVisible.value = false;
     };
 
     return { showToast, signInDialogVisible, showSignInDialog, onSignIn };
-  }
+  },
 };
 </script>
 

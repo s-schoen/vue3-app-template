@@ -17,13 +17,13 @@ export default {
   props: {
     showToggle: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup(props, { emit }) {
     const onMenuToggle = () => emit("menu-toggle");
     return { onMenuToggle };
-  }
+  },
 };
 </script>
 

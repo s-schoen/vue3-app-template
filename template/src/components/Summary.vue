@@ -14,11 +14,11 @@ export default {
     title: String,
     detail: String,
     value: String,
-    style: Object
+    style: Object,
   },
   setup() {
     return {};
-  }
+  },
 };
 </script>
 

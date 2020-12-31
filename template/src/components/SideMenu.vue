@@ -7,7 +7,7 @@
           :key="index"
           :class="[
             { 'selected-menuitem': selectedIndex === index },
-            { hoverable: item.to || item.url }
+            { hoverable: item.to || item.url },
           ]"
           @click="onClick($event, item, index)"
         >
@@ -59,7 +59,7 @@ import { ref } from "vue";
 
 export default {
   props: {
-    items: Array
+    items: Array,
   },
   setup(props, { emit }) {
     const selectedIndex = ref(0);
@@ -79,17 +79,17 @@ export default {
       selectedIndex.value = index === selectedIndex.value ? null : index;
       emit("click", {
         originalEvent: event,
-        item: item
+        item: item,
       });
     };
 
-    const isVisible = item =>
+    const isVisible = (item) =>
       typeof item.visible === "function"
         ? item.visible()
         : item.visible !== false;
 
     return { onClick, isVisible, selectedIndex };
-  }
+  },
 };
 </script>
 

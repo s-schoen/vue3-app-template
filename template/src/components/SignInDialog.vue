@@ -1,9 +1,5 @@
 <template>
-  <Dialog
-    header="Sign In"
-    :visible="visible"
-    :closable="false"
-  >
+  <Dialog header="Sign In" :visible="visible" :closable="false">
     <span>Enter your credentials</span>
     <div class="p-inputgroup p-mt-2 dialog-input">
       <span class="p-inputgroup-addon">
@@ -43,7 +39,7 @@ import Password from "primevue/password";
 export default {
   components: { Dialog, Button, InputText, Password },
   props: {
-    visible: Boolean
+    visible: Boolean,
   },
   setup(props, { emit }) {
     const userInput = reactive({ username: null, password: null });
@@ -55,14 +51,14 @@ export default {
     const onSignIn = () => {
       emit("signin", {
         username: userInput.username,
-        password: userInput.password
+        password: userInput.password,
       });
       userInput.username = null;
       userInput.password = null;
     };
 
     return { userInput, onCancel, onSignIn };
-  }
+  },
 };
 </script>
 

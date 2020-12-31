@@ -17,7 +17,7 @@ export default {
   name: "Footer",
   setup() {
     return {};
-  }
+  },
 };
 </script>
 

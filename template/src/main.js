@@ -18,6 +18,6 @@ const app = createApp(App)
 
 app.config = {
   globalProperties: {
-    $primevue: { ripple: true }
-  }
+    $primevue: { ripple: true },
+  },
 };

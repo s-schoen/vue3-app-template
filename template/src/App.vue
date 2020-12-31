@@ -7,9 +7,7 @@
       @menu-toggle="onMenuToggle"
     >
       Title
-      <template v-slot:right>
-        Header Right
-      </template>
+      <template v-slot:right> Header Right </template>
     </Header>
 
     <!-- Sidebar / Navigation drawer including branding, account and navigation menu  -->
@@ -31,7 +29,7 @@
       :class="[
         'content',
         'sidebar-transition',
-        { 'sidebar-visible': sidebarVisible }
+        { 'sidebar-visible': sidebarVisible },
       ]"
     >
       <router-view />
@@ -87,14 +85,14 @@ export default {
       { label: "Dashboard", icon: "pi pi-fw pi-home", to: "/" },
       { label: "Badge", icon: "pi pi-fw pi-home", to: "/", badge: "1234" },
       { label: "Header", icon: "pi pi-fw pi-sitemap" },
-      { label: "Disabled", icon: "pi pi-fw pi-home", to: "/", disabled: true }
+      { label: "Disabled", icon: "pi pi-fw pi-home", to: "/", disabled: true },
     ];
 
     const accountOptions = [
       {
         label: "Settings",
-        icon: "pi pi-fw pi-cog"
-      }
+        icon: "pi pi-fw pi-cog",
+      },
     ];
 
     onMounted(() => {
@@ -108,9 +106,9 @@ export default {
       menuItems,
       accountOptions,
       sidebarVisible,
-      onMenuClick
+      onMenuClick,
     };
-  }
+  },
 };
 </script>
 <style lang="scss">

@@ -11,12 +11,12 @@ export default {
   props: {
     visible: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup() {
     return {};
-  }
+  },
 };
 </script>
 
