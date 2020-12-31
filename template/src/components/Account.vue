@@ -1,9 +1,9 @@
 <template>
   <div class="account-container">
     <div class="account-info">
-      <img
-        :src="avatar ? avatar : require('@/assets/avatar.svg')"
-        alt="Avatar"
+      <Avatar
+        size="large"
+        :image="avatar ? avatar : require('@/assets/avatar.svg')"
       />
       <div v-if="!signin" class="account-text">
         <button class="p-link account-link" @click="onClick">
@@ -38,31 +38,32 @@
 <script>
 import { ref } from "vue";
 import Button from "primevue/button";
+import Avatar from "primevue/avatar";
 
 export default {
   props: {
     avatar: {
       type: String,
-      default: null
+      default: null,
     },
     name: String,
     subtext: String,
     showOptions: {
       type: Boolean,
-      default: true
+      default: true,
     },
     options: Array,
     signin: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
-  components: { Button },
+  components: { Button, Avatar },
   setup(props, { emit }) {
     const optionsVisible = ref(false);
     const onClick = () => (optionsVisible.value = !optionsVisible.value);
 
-    const onOptionClick = option => {
+    const onOptionClick = (option) => {
       //execute command
       if (option.command) {
         option.command({ option: option });
@@ -76,7 +77,7 @@ export default {
     };
 
     return { onClick, onSignIn, onOptionClick, optionsVisible };
-  }
+  },
 };
 </script>
 
