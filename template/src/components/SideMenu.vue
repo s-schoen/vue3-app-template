@@ -24,7 +24,7 @@
           >
             <i :class="item.icon" />
             <span v-text="item.label"></span>
-            <span v-if="item.badge" class="p-tag" v-text="item.badge"></span>
+            <Tag v-if="item.badge" :value="item.badge" />
           </router-link>
 
           <!-- External Navigation -->
@@ -56,11 +56,13 @@
 
 <script>
 import { ref } from "vue";
+import Tag from "primevue/tag";
 
 export default {
   props: {
     items: Array,
   },
+  components: { Tag },
   setup(props, { emit }) {
     const selectedIndex = ref(0);
 
