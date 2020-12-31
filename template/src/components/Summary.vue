@@ -1,6 +1,6 @@
 <template>
-  <div class="p-col-12">
-    <div class="card summary">
+  <div class="p-col-12" @click="onClick">
+    <div class="card summary p-shadow-3">
       <span class="title" v-text="title"></span>
       <span class="detail" v-text="detail"></span>
       <span class="value" :style="style" v-text="value"></span>
@@ -16,8 +16,12 @@ export default {
     value: String,
     style: Object,
   },
-  setup() {
-    return {};
+  setup(props, { emit }) {
+    const onClick = () => {
+      emit("summaryClick");
+    };
+
+    return { onClick };
   },
 };
 </script>
@@ -48,6 +52,15 @@ export default {
     border-radius: $borderRadius;
 
     background-color: $primaryColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken(#ffffff, 3%);
+  }
+
+  &:active {
+    background-color: darken(#ffffff, 5%);
   }
 }
 .card {
